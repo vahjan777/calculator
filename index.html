@@ -9,41 +9,41 @@
     <div>
         <table class="table">
                 <tr>
-                    <th colspan="5" class="tabhead"><h3 id = "outPuteInfo"></h3></th>
+                    <th colspan="5" class="tabhead"><h3 id = "display"></h3></th>
                 </tr>
                 <tr>
                     <th><button class="but">x_2</button></th>
                     <th><button class="but">x_3</button></th>
                     <th><button class="but">10|x</button></th>
                     <th><button class="but">x!</button></th>
-                    <th><button class="but">C</button></th>
+                    <th><button class="but" onclick="clearAll()">C</button></th>
                 </tr>
                 <tr>
-                    <th><button class="but" value="%">%</button></th>
+                    <th><button class="but" value="persent" onclick="mathOption(value)">%</button></th>
                     <th><button class="but">+/-</button></th>
                     <th><button class="but">SQRT</button></th>
-                    <th><button class="but" value="/" onclick="setNum(value)">/</button></th>
+                    <th><button class="but" value="divis" onclick="mathOption(value)">/</button></th>
                     <th><button class="but">Round</button></th>
                 </tr>
                 <tr>
                     <th><button class="but" value="7" onclick="setNum(value)">7</button></th>
                     <th><button class="but" value="8" onclick="setNum(value)">8</button></th>
                     <th><button class="but" value="9" onclick="setNum(value)">9</button></th>
-                    <th><button class="but" value="*" onclick="setNum(value)">*</button></th>
+                    <th><button class="but" value="mult" onclick="mathOption(value)">*</button></th>
                     <th><button class="but">1/X</button></th>
                 </tr>
                 <tr>
                     <th><button class="but" value="4" onclick="setNum(value)">4</button></th>
                     <th><button class="but" value="5" onclick="setNum(value)">5</button></th>
                     <th><button class="but" value="6" onclick="setNum(value)">6</button></th>
-                    <th><button class="but" value="-" onclick="setNum(value)">-</button></th>
+                    <th><button class="but" value="min" onclick="mathOption(value)">-</button></th>
                     <th rowspan="3"><button class="but1" onclick="equal()">=</button></th>
                 </tr>
                 <tr>
                     <th><button class="but" value="1" onclick="setNum(value)">1</button></th>
                     <th><button class="but" value="2" onclick="setNum(value)">2</button></th>
                     <th><button class="but" value="3" onclick="setNum(value)">3</button></th>
-                    <th><button class="but" value="+" onclick="setNum(value)">+</button></th>
+                    <th><button class="but" value="plus" onclick="mathOption(value)">+</button></th>
                 </tr>
                 <tr>
                     <th colspan="2"><button class="but2" value="0" onclick="setNum(value)">0</button></th>

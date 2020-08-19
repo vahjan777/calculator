@@ -1,15 +1,22 @@
-let setNumb = '';
-let val2;
-let val1;
+const display = document.getElementById("display")
+let currentValue = '';
+let bufferValue;
+let simbol;
 const plus = document.getElementById("plus");
 
 
 function setNum(val) {
-    setNumb = setNumb + val;
-    console.log(setNumb);
-    return setNumb;
+    currentValue = currentValue + val;
+    console.log(currentValue);
+    display.innerHTML = currentValue;
 }
 
+function mathOption(value){
+    bufferValue = +currentValue;
+    currentValue = '';
+    simbol = value;
+    display.innerHTML = bufferValue;
+}
 // function setOpt(id) {
 //
 //     if( val1 === 0 ) {
@@ -23,5 +30,23 @@ function setNum(val) {
 // }
 
 function equal(){
-    console.log(eval(setNumb));
+    if(simbol === "plus") {
+        bufferValue = bufferValue +  +currentValue;
+    } else if(simbol === "min") {
+        bufferValue = bufferValue  - currentValue;
+    } else if(simbol === "mult") {
+        bufferValue = bufferValue  * +currentValue;
+    }else if(simbol === "divis") {
+        bufferValue = bufferValue  / +currentValue;
+    }else if(simbol === "persent") {
+        bufferValue = bufferValue  * +currentValue / 100;
+    }
+    console.log(bufferValue);
+    display.innerHTML = bufferValue;
+}
+
+function clearAll() {
+    bufferValue = null;
+    currentValue = '';
+    display.innerHTML = currentValue;
 }
