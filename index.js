@@ -18,26 +18,33 @@ function mathOption(value) {
 }
 function mathOption1(value) {
     if(value === "square"){
-        bufferValue = +currentValue * +currentValue;
-    } else if(value === "cube") {
-        bufferValue = +currentValue * +currentValue * +currentValue;
+        currentValue = +currentValue * +currentValue;
+    }
+    else if(value === "cube") {
+        currentValue = +currentValue * +currentValue * +currentValue;
     }
     else if(value === "tenRedXDig") {
-        bufferValue = tenRedXDig(+currentValue);
+        currentValue = tenRedXDig(+currentValue);
     }
     else if(value === "fact") {
-        bufferValue = fact(+currentValue);
+        currentValue = fact(+currentValue);
     }
     else if(value === "sqrt") {
-        bufferValue = sqrt(+currentValue);
+        currentValue = sqrt(+currentValue);
     }
     else if(value === "round") {
-        bufferValue = (+currentValue).toFixed();
+        currentValue = (+currentValue).toFixed();
     }
     else if(value === "plusMin") {
-        bufferValue = -(+currentValue);
+        currentValue = -(+currentValue);
     }
-    display.innerHTML = bufferValue
+    else if(value === "oneDividX") {
+        currentValue = 1 / +currentValue;
+    }
+    else if(value === "ce") {
+        currentValue = currentValue.slice(0, -1);
+    }
+    display.innerHTML = currentValue;
 }
 
 function equal() {
